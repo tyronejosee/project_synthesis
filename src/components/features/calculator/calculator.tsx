@@ -302,109 +302,171 @@ const Calculator: React.FC = () => {
   };
 
   return (
-    <div className="calculator-container">
-      <div className="calculator-display">
-        <div className="expression">{getExpressionText()}</div>
-        <div className="result">{getDisplayText()}</div>
-      </div>
-      <div className="calculator-keypad">
-        <div className="function-keys">
-          <button className="key function" onClick={memoryAdd}>
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <div className="bg-white rounded-xl shadow-lg p-4 w-[320px] space-y-4">
+        <div className="bg-gray-900 text-white rounded-md px-3 py-4">
+          <div className="text-sm text-gray-400">{getExpressionText()}</div>
+          <div className="text-3xl font-mono break-words">
+            {getDisplayText()}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-4 gap-2">
+          {/* Memory buttons */}
+          <button
+            className="bg-blue-100 text-blue-700 py-2 rounded font-medium"
+            onClick={memoryAdd}
+          >
             M+
           </button>
-          <button className="key function" onClick={memorySubtract}>
+          <button
+            className="bg-blue-100 text-blue-700 py-2 rounded font-medium"
+            onClick={memorySubtract}
+          >
             M-
           </button>
-          <button className="key function" onClick={memoryRecall}>
+          <button
+            className="bg-blue-100 text-blue-700 py-2 rounded font-medium"
+            onClick={memoryRecall}
+          >
             MR
           </button>
-          <button className="key function" onClick={memoryClear}>
+          <button
+            className="bg-blue-100 text-blue-700 py-2 rounded font-medium"
+            onClick={memoryClear}
+          >
             MC
           </button>
-        </div>
-        <div className="digit-keys">
-          <div className="calculator-row">
-            <button className="key control" onClick={clearAll}>
-              AC
-            </button>
-            <button className="key control" onClick={clearEntry}>
-              CE
-            </button>
-            <button className="key control" onClick={deleteLastDigit}>
-              ⌫
-            </button>
-            <button
-              className="key operator"
-              onClick={() => performOperation("/")}
-            >
-              &divide;
-            </button>
-          </div>
-          <div className="calculator-row">
-            <button className="key digit" onClick={() => inputDigit(7)}>
-              7
-            </button>
-            <button className="key digit" onClick={() => inputDigit(8)}>
-              8
-            </button>
-            <button className="key digit" onClick={() => inputDigit(9)}>
-              9
-            </button>
-            <button
-              className="key operator"
-              onClick={() => performOperation("*")}
-            >
-              &times;
-            </button>
-          </div>
-          <div className="calculator-row">
-            <button className="key digit" onClick={() => inputDigit(4)}>
-              4
-            </button>
-            <button className="key digit" onClick={() => inputDigit(5)}>
-              5
-            </button>
-            <button className="key digit" onClick={() => inputDigit(6)}>
-              6
-            </button>
-            <button
-              className="key operator"
-              onClick={() => performOperation("-")}
-            >
-              -
-            </button>
-          </div>
-          <div className="calculator-row">
-            <button className="key digit" onClick={() => inputDigit(1)}>
-              1
-            </button>
-            <button className="key digit" onClick={() => inputDigit(2)}>
-              2
-            </button>
-            <button className="key digit" onClick={() => inputDigit(3)}>
-              3
-            </button>
-            <button
-              className="key operator"
-              onClick={() => performOperation("+")}
-            >
-              +
-            </button>
-          </div>
-          <div className="calculator-row">
-            <button className="key digit" onClick={() => percentage()}>
-              %
-            </button>
-            <button className="key digit" onClick={() => inputDigit(0)}>
-              0
-            </button>
-            <button className="key digit" onClick={() => inputDot()}>
-              .
-            </button>
-            <button className="key operator" onClick={calculateResult}>
-              =
-            </button>
-          </div>
+
+          {/* Row: AC, CE, ⌫, ÷ */}
+          <button
+            className="bg-red-100 text-red-700 py-2 rounded font-medium"
+            onClick={clearAll}
+          >
+            AC
+          </button>
+          <button
+            className="bg-red-100 text-red-700 py-2 rounded font-medium"
+            onClick={clearEntry}
+          >
+            CE
+          </button>
+          <button
+            className="bg-yellow-100 text-yellow-700 py-2 rounded font-medium"
+            onClick={deleteLastDigit}
+          >
+            ⌫
+          </button>
+          <button
+            className="bg-purple-100 text-purple-700 py-2 rounded font-medium"
+            onClick={() => performOperation("/")}
+          >
+            ÷
+          </button>
+
+          {/* Digits 7–9, * */}
+          <button
+            className="bg-gray-200 py-2 rounded font-semibold"
+            onClick={() => inputDigit(7)}
+          >
+            7
+          </button>
+          <button
+            className="bg-gray-200 py-2 rounded font-semibold"
+            onClick={() => inputDigit(8)}
+          >
+            8
+          </button>
+          <button
+            className="bg-gray-200 py-2 rounded font-semibold"
+            onClick={() => inputDigit(9)}
+          >
+            9
+          </button>
+          <button
+            className="bg-purple-100 text-purple-700 py-2 rounded font-medium"
+            onClick={() => performOperation("*")}
+          >
+            ×
+          </button>
+
+          {/* Digits 4–6, - */}
+          <button
+            className="bg-gray-200 py-2 rounded font-semibold"
+            onClick={() => inputDigit(4)}
+          >
+            4
+          </button>
+          <button
+            className="bg-gray-200 py-2 rounded font-semibold"
+            onClick={() => inputDigit(5)}
+          >
+            5
+          </button>
+          <button
+            className="bg-gray-200 py-2 rounded font-semibold"
+            onClick={() => inputDigit(6)}
+          >
+            6
+          </button>
+          <button
+            className="bg-purple-100 text-purple-700 py-2 rounded font-medium"
+            onClick={() => performOperation("-")}
+          >
+            −
+          </button>
+
+          {/* Digits 1–3, + */}
+          <button
+            className="bg-gray-200 py-2 rounded font-semibold"
+            onClick={() => inputDigit(1)}
+          >
+            1
+          </button>
+          <button
+            className="bg-gray-200 py-2 rounded font-semibold"
+            onClick={() => inputDigit(2)}
+          >
+            2
+          </button>
+          <button
+            className="bg-gray-200 py-2 rounded font-semibold"
+            onClick={() => inputDigit(3)}
+          >
+            3
+          </button>
+          <button
+            className="bg-purple-100 text-purple-700 py-2 rounded font-medium"
+            onClick={() => performOperation("+")}
+          >
+            +
+          </button>
+
+          {/* %, 0, ., = */}
+          <button
+            className="bg-gray-200 py-2 rounded font-semibold"
+            onClick={percentage}
+          >
+            %
+          </button>
+          <button
+            className="bg-gray-200 py-2 rounded font-semibold"
+            onClick={() => inputDigit(0)}
+          >
+            0
+          </button>
+          <button
+            className="bg-gray-200 py-2 rounded font-semibold"
+            onClick={inputDot}
+          >
+            .
+          </button>
+          <button
+            className="bg-green-500 text-white py-2 rounded font-bold"
+            onClick={calculateResult}
+          >
+            =
+          </button>
         </div>
       </div>
     </div>
