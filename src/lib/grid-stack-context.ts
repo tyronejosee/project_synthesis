@@ -1,5 +1,6 @@
-import { createContext, useContext } from "react";
 import type { GridStack, GridStackOptions, GridStackWidget } from "gridstack";
+
+import { createContext, useContext } from "react";
 
 export const GridStackContext = createContext<{
   initialOptions: GridStackOptions;

@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --font-outfit: "Outfit", sans-serif;
-  --font-roboto-mono: "Roboto Mono", monospace;
-} */
-
 html {
   @apply bg-white text-neutral-950 selection:bg-primary selection:text-white;
 }
@@ -23,16 +18,15 @@ html {
 }
 
 .grid-stack {
-  background: #fafad2;
+  @apply w-full h-full bg-white;
 }
 
 .grid-stack-item-content {
-  text-align: center;
-  background-color: #18bc9c;
+  @apply text-center bg-neutral-200 rounded-xl text-xs;
 }
 
 .grid-stack-item-removing {
-  opacity: 0.5;
+  @apply opacity-50;
 }
 .trash {
   height: 100px;
@@ -41,17 +35,12 @@ html {
     no-repeat;
 }
 
-/* make nested grid have slightly darker bg take almost all space (need some to tell them apart) so items inside can have similar to external size+margin */
 .grid-stack > .grid-stack-item.grid-stack-sub-grid > .grid-stack-item-content {
   background: rgba(0, 0, 0, 0.1);
   inset: 8px 8px;
 }
 .grid-stack.grid-stack-nested {
-  background: none;
-  /* background-color: red; */
-  /* take entire space */
-  position: absolute;
-  inset: 0; /* TODO change top: if you have content in nested grid */
+  @apply border border-neutral-500 rounded-xl absolute inset-0;
 }
 
 .w-full {
