@@ -1,18 +1,15 @@
 <div align="center">
-  <a href="https://github.com/tyronejosee/project_synthesis#gh-light-mode-only" target="_blank">
-    <img src="./.github/logo_color.svg" alt="logo-light" width="80">
-  </a>
-  <a href="https://github.com/tyronejosee/project_synthesis/#gh-dark-mode-only" target="_blank">
-    <img src="./.github/logo_color.svg" alt="logo-dark" width="80">
+  <a href="https://github.com/tyronejosee/project_synthesis" target="_blank">
+    <img src="icon.svg" alt="icon" width="80">
   </a>
 </div>
 
 <div align="center">
-  <h1><strong>Synthesis</strong></h1>
+  <h1><strong>Project Synthesis</strong></h1>
 </div>
 
 <p align="center">
-  Comprehensive personal productivity dashboard built with React and Vite. It includes key features like a Pomodoro timer, an interactive Kanban board, customizable timers and alarms, and useful calculators for project management and development.
+  A personal productivity dashboard built with React and Vite. It includes key features like a Pomodoro timer, an interactive Kanban board, customizable timers and alarms, and useful calculators for project management and development.
 </p>
 
 <p align="center">
@@ -39,26 +36,6 @@
   </a>
 </p>
 
-## 🗃️ Repository
-
-Clone the repository.
-
-```bash
-git clone git@github.com:tyronejosee/project_synthesis.git
-```
-
-## 🌱 Contributing
-
-If you'd like to contribute to the project:
-
-1. Fork the repository.
-2. Create a branch with your feature: `git checkout -b feature/new-feature`.
-3. Make your changes and commit them: `git commit -m 'feat: added new feature'`.
-4. Push your changes: `git push origin feature/new-feature`.
-5. Open a Pull Request and submit your changes to the `main` branch.
-
-The app was created with **React** and **Vite**, using **React Router DOM** for routing and **PNPM** as the package manager.
-
 ## ✅ Requirements
 
 * [Node.js](https://nodejs.org/) >= 16.8.0
@@ -66,9 +43,15 @@ The app was created with **React** and **Vite**, using **React Router DOM** for 
 
 ## ⚙️ Installation
 
+Clone the repository.
+
+```bash
+git clone git@github.com:tyronejosee/project_synthesis.git
+```
+
 To get started, make sure you have [PNPM](https://pnpm.io/installation) installed. Then follow these steps from the project root:
 
-Install dependencies:
+Install dependencies.
 
 ```bash
 pnpm install
@@ -80,25 +63,25 @@ Start the development server at `http://localhost:5173/` (Vite's default port).
 pnpm dev
 ```
 
-Build the app for production:
+Build the app for production.
 
 ```bash
 pnpm build
 ```
 
-Preview the app in production mode:
+Preview the app in production mode.
 
 ```bash
 pnpm preview
 ```
 
-Run the linter to check code quality:
+Run the linter to check code quality.
 
 ```bash
 pnpm lint
 ```
 
-Run the tests (if available):
+Run the tests (if available).
 
 ```bash
 pnpm test
@@ -121,8 +104,20 @@ This project uses **React Router DOM** to manage routing. Page components are de
 
 You can deploy this app to platforms like [Vercel](https://vercel.com/), [Netlify](https://www.netlify.com/), or any service that supports Node.js and React applications.
 
+## 🌱 Contributing
+
+If you'd like to contribute to the project.
+
+1. Fork the repository.
+2. Create a branch with your feature: `git checkout -b feature/new-feature`.
+3. Make your changes and commit them: `git commit -m 'feat: add new feature'`.
+4. Push your changes: `git push origin feature/new-feature`.
+5. Open a Pull Request and submit your changes to the `main` branch.
+
+The app was created with **React** and **Vite**, using **React Router DOM** for routing and **PNPM** as the package manager.
+
 ## ⚖️ License
 
-This project is licensed under the [Apache License 2.0](https://github.com/tyronejosee/project_synthesis/blob/main/LICENSE).
+This project is licensed under the [Apache License 2.0](LICENSE).
 
 Enjoy! 🎉
